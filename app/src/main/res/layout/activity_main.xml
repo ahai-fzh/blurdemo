@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="1500px"
+    android:background="#ffff00"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <!--与父view对齐是ok的-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--与兄弟view对齐也是ok的-->
+        <!--android:layout_alignTop="@+id/textview1"-->
+        <!--android:layout_alignBottom="@+id/textview2"-->
+        <ImageView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_alignTop="@+id/textview1"
+            android:layout_alignBottom="@+id/textview2"
+            android:visibility="visible"/>
+
+        <View
+            android:id="@+id/maskView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/blurView"
+            android:background="#99ff0000"/>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="I am blur demo."
+            android:textStyle="bold"
+            android:background="#6600ff00"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:layout_below="@id/textview1"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="I am blur demo 2."
+            android:textStyle="bold"
+            android:background="#6600ff00"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+</LinearLayout>
